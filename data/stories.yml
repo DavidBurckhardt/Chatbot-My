@@ -1,0 +1,194 @@
+version: "3.1"
+
+stories:
+
+#Stories relacionadas con el saludo inicial
+
+- story: Happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: Happy path x2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great_+vos?
+  - action: utter_estado
+
+- story: Sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_unhappy
+
+- story: Que haces?
+  steps:
+  - intent: que_haces
+  - action: utter_que_haces
+
+#Stories relacionadas con una persona
+
+#Python
+- story: Rol en la facultad
+  steps:
+  - intent: rol_facultad
+    entities: 
+      - cargo_facultad
+  - action: action_cargo
+
+#Json
+- story: Reconocer nombre alumno
+  steps:
+  - intent: decir_nombre
+    entities: 
+      - nombre_persona
+  - slot_was_set:
+    - docente: false
+  - action: action_extraer_datos
+
+- story: Reconocer nombre docente
+  steps:
+  - intent: decir_nombre
+    entities: 
+      - nombre_persona
+  - slot_was_set:
+    - docente: true
+  - action: utter_docente_identificado
+
+- story: Conocer nuevo estudiante
+  steps:
+  - intent: decir_nombre_completo
+    entities:
+      - apellido
+  - slot_was_set:
+    - desconocido: true
+  - action: utter_cursamos_juntos
+  - checkpoint: conocer_nuevo_estudiante 
+
+- story: Cursa conmigo pero no dice la materia directo
+  steps:
+  - checkpoint: conocer_nuevo_estudiante
+  - slot_was_set:
+    - desconocido: true
+  - intent: affirm
+  - action: utter_que_materia
+  - intent: decir_materia
+    entities:
+      - materia
+  - action: action_guardar_datos
+
+- story: No cursa conmigo o me dice la materia directo
+  steps:
+  - checkpoint: conocer_nuevo_estudiante
+  - slot_was_set:
+    - desconocido: true
+  - or:
+    - intent: deny
+    - intent: affirm_y_materia
+      entities:
+        - materia
+        - nombre_persona
+        - apellido
+  - action: action_guardar_datos
+
+#Prolog
+- story: Es tu amigo?
+  steps:
+  - intent: es_tu_amigo
+    entities:
+      - nombre_persona
+  - action: action_amigos
+
+#Stories relacionadas con las materias
+
+#Prolog
+- story: Plan de estudios 
+  steps:
+  - intent: todas_las_materias_del_plan
+  - action: action_materias
+
+- story: Todas las materias de un año determinado
+  steps:
+  - intent: materias_por_anio
+    entities:
+      - anio_materia
+  - action: action_materias
+
+- story: Promocionaste la materia...?
+  steps:
+  - intent: decir_materia_promocionada
+    entities:
+      - materia
+  - action: action_promocionada
+
+- story: Que dia cursas?
+  steps: 
+  - intent: cursas_dia
+    entities:
+      - dia
+  - action: action_cursada
+
+- story: Estado de la carrera y materias
+  steps:
+  - intent: acerca_de_carrera_y_materias
+  - action: utter_estado_materias_carrera
+  - checkpoint: positivo_negativo
+
+- story: Estado positivo
+  steps:
+  - checkpoint: positivo_negativo
+  - intent: estado_de_la_carrera_negativo
+  - action: utter_estado_negativo
+
+- story: Estado positivo
+  steps:
+  - checkpoint: positivo_negativo
+  - intent: estado_de_la_carrera_positivo
+  - action: utter_estado_positivo
+
+#Python
+- story: Cursas la materia...?
+  steps:
+  - intent: cursando_materia
+  - action: action_materia
+
+#Stories grupales
+
+- story: interactive_story_2
+  steps:
+  - intent: consultar_por_ejercicio
+    entities:
+    - inciso: '3'
+    - tp: '1'
+    - materia: Analisis Matematico I
+  - slot_was_set:
+    - materia: Analisis Matematico I
+  - slot_was_set:
+    - inciso: '1'
+  - slot_was_set:
+    - tp: '1'
+  - action: action_consultar_por_ejercicio
+
+#- story: consultar_por_ejercicio_path
+#  steps:
+#  - intent: consultar_por_ejercicio
+#  - action: action_consultar_por_ejercicio
+
+- story: consultar_por_ejercicio_otro_lo_tiene_path
+  steps:
+  - intent: consultar_por_ejercicio_otro_lo_tiene
+  # - action: action_consultar_por_ejercicio_otro_lo_tiene
+
+- story: consultar_por_ejercicio_otro_NO_lo_tiene_path
+  steps:
+  - intent: consultar_por_ejercicio_otro_NO_lo_tiene
+  # - action: action_consultar_por_ejercicio_otro_NO_lo_tiene
+
+- story: consultar_por_ejercicio_agradece_path
+  steps:
+  - intent: consultar_por_ejercicio_agradece
+  #- action: action_consultar_por_ejercicio_agradece

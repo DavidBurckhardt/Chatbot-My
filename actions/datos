@@ -1,0 +1,50 @@
+{
+    "tincho": {
+        "nombre": "Luis Martin",
+        "apellido": "Caballero Miranda",
+        "materias_cursa_conmigo": [
+            "Prog Exploratoria"
+        ]
+    },
+    "julian": {
+        "nombre": "Julian",
+        "apellido": "Barreiro",
+        "materias_cursa_conmigo": []
+    },
+    "martino": {
+        "nombre": "Martino",
+        "apellido": "Ferrero",
+        "materias_cursa_conmigo": [
+            "Prog Exploratoria",
+            "Investigacion Operativa",
+            "Bases de Datos"
+        ]
+    },
+    "pia": {
+        "nombre": "Pia",
+        "apellido": "Bedini",
+        "materias_cursa_conmigo": [
+            "Prog Exploratoria",
+            "Investigacion Operativa"
+        ]
+    },
+    "tadeo": {
+        "nombre": "Tadeo",
+        "apellido": "Bedini",
+        "materias_cursa_conmigo": []
+    },
+    "tomas": {
+        "nombre": "Tomas",
+        "apellido": "Bedini",
+        "materias_cursa_conmigo": [
+            "Prog Exploratoria"
+        ]
+    },
+    "martin": {
+        "nombre": "Martin",
+        "apellido": "Arispe",
+        "materias_cursa_conmigo": [
+            "Investigacion Operativa"
+        ]
+    }
+}

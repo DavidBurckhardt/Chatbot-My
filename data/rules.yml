@@ -1,0 +1,70 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Gracias
+  steps:
+  - intent: gracias
+  - action: utter_de_nada
+
+#Rules sobre informacion personal
+
+- rule: Cuantos años tenes?
+  steps:
+  - intent: edad
+  - action: utter_edad
+
+- rule: De que ciudad sos?
+  steps:
+  - intent: ciudad_origen
+  - action: utter_ciudad_origen
+
+- rule: Donde estudias?
+  steps:
+  - intent: lugar_estudio
+  - action: utter_lugar_estudio
+
+- rule: Opinion de la materia?
+  steps:
+  - intent: opinion_de_la_materia
+  - action: utter_opinion_de_la_materia
+
+#Rules sobre la facultad
+
+- rule: Tenes finales pendientes?
+  steps:
+  - intent: finales
+  - action: utter_finales
+
+- rule: Que estudio?
+  steps:
+  - intent: que_estudio
+  - action: utter_que_estudio
+
+- rule: En que año estas?
+  steps:
+  - intent: anio_cursada
+  - action: utter_año_cursada
+
+- rule: Que materias estas cursando?
+  steps:
+  - intent: materias_cursando
+  - action: utter_materias_cursando
+
+#Rule para intent desconocido
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+

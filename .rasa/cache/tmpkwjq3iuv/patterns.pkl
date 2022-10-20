@@ -1,0 +1,22 @@
+[
+  {
+    "name": "inciso",
+    "pattern": "[1-9]{1}"
+  },
+  {
+    "name": "tp",
+    "pattern": "[1-9]{1}"
+  },
+  {
+    "name": "nombre_persona",
+    "pattern": "(\\bMartino\\b|\\bIgnacio\\b|\\bAnalia\\b|\\bMatias\\b|\\bNacho\\b|\\bTincho\\b|\\bHerre\\b|\\bMartin\\b|\\bJuani\\b|\\bPia\\b|\\bJuan\\ Francisco\\b|\\bJuan\\b|\\bJuan\\ Ignacio\\b|\\bSol\\b|\\bTadeo\\b|\\bMateo\\b|\\bXimena\\b|\\bDelfina\\b|\\bLeonel\\b|\\bTomas\\b|\\bNicolas\\b)"
+  },
+  {
+    "name": "apellido",
+    "pattern": "(\\bCaballero\\b|\\bMessi\\b|\\bFerrero\\b|\\bBedini\\b|\\bSampedro\\b|\\bVazquez\\b|\\bArispe\\b|\\bSpinelli\\b|\\bEcharri\\b|\\bBillordo\\b|\\bDonegana\\b|\\bCrocci\\b|\\bLeguizamon\\b|\\bGoicochea\\b|\\bElgart\\b|\\bCiganda\\b|\\bMurillo\\b|\\bBenecier\\b)"
+  },
+  {
+    "name": "materia",
+    "pattern": "(\\bIntroduccion\\ a\\ la\\ programacion\\ I\\b|\\bAnalisis\\ matematico\\ I\\b|\\bAlgebra\\ I\\b|\\bQuimica\\b|\\bCiencias\\ de\\ la\\ Computacion\\ I\\b|\\bIntroduccion\\ a\\ la\\ Programacion\\ II\\b|\\bAlgebra\\ Lineal\\b|\\bFisica\\ General\\b|\\bMatematica\\ Discreta\\b|\\bCiencias\\ de\\ la\\ Computacion\\ II\\b|\\bAnalisis\\ y\\ Diseño\\ de\\ Algoritmos\\ I\\b|\\bIntroduccion\\ a\\ la\\ Arquitectura\\ de\\ Sistemas\\b|\\bAnalisis\\ Matematico\\ II\\b|\\bElectricidad\\ y\\ Magnetismo\\b|\\bAnalisis\\ y\\ Diseño\\ de\\ Algoritmos\\ II\\b|\\bComunicacion\\ de\\ Datos\\ I\\b|\\bProbabilidad\\ y\\ Estadistica\\b|\\bElectronica\\ Digital\\b|\\bProgramacion\\ Orientada\\ a\\ Objetos\\b|\\bEstructura\\ de\\ Almacenamiento\\ de\\ Datos\\b|\\bMetodologias\\ de\\ Desarrollo\\ de\\ Software\\b|\\bArquitectura\\ de\\ Computadoras\\ I\\b|\\bProgramacion\\ Exploratoria\\b|\\bBase\\ de\\ Datos\\b|\\bLenguajes\\ de\\ Programacion\\b|\\bSistemas\\ Operativos\\b|\\bInvestigacion\\ Operativa\\b|\\bArquitectura\\ de\\ Computadores\\ y\\ Tecnicas\\ Digitales\\b|\\bTeoria\\ de\\ la\\ Informacion\\b|\\bComunicacion\\ de\\ Datos\\ II\\b|\\bIntroduccion\\ al\\ Calculo\\ Diferencial\\ e\\ Integral\\b|\\bDiseño\\ de\\ Sistemas\\ de\\ Software\\b|\\bDiseño\\ de\\ Compiladores\\b|\\bIngenieria\\ de\\ Software\\b)"
+  }
+]

@@ -1,0 +1,14 @@
+{
+    "lunes": {
+	"materias": [ "Bases de Datos", "Investigacion Operativa" ]
+    },
+    "martes": {
+	"materias": [ "Sistemas Operativos", "Lenguajes de Programacion", "Investigacion Operativa" ]
+    },
+    "miercoles": {
+	"materias": [ "Bases de Datos", "Programacion Exploratoria" ]
+    },
+    "jueves": {
+	"materias": [ "Sistemas Operativos ", "Lenguajes de Programacion" ] 
+    }
+}

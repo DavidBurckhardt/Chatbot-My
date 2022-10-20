@@ -1,0 +1,555 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - holaa
+    - hola
+    - buenas
+    - hi
+    - holu
+    - hey
+    - holaaaaa
+    - Hola David
+    - Buenas David
+    - davidd
+    - davoo
+    - davo
+    - che
+    - che davo
+    - bro
+    - brooo
+
+- intent: goodbye
+  examples: |
+    - nos vemoss
+    - adios
+    - hasta luego
+    - descansaa
+    - beso
+    - abrazo grande
+    - ya me tengo que ir
+    - nos vemos amigo
+    - chau
+    - adios bro
+
+- intent: affirm
+  examples: |
+    - si
+    - s
+    - afirmativo
+    - por supuesto
+    - eso suena bien
+    - correcto
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nunca
+    - no lo creo
+    - no eso no
+    - de ninguna manera
+    - no realmenre
+    - realmente no
+
+- intent: mood_great
+  examples: |
+    - perfecto
+    - genial
+    - increible
+    - impresionante
+    - me siento muy bien
+    - extremadamente bueno
+    - casi perfecto
+    - bien
+    - todo bien
+
+- intent: mood_great_+vos?
+  examples: |
+    - perfecto y vos?
+    - bien y vos?
+    - vos? yo bien
+    - todo bien y vos?
+    - bien y usted?
+    - excelente y usted?
+    - todo bien, y vos?
+
+
+- intent: mood_unhappy
+  examples: |
+    - mi dia fue horrible
+    - estoy triste
+    - no me siento muy bien
+    - estoy desepcionado
+    - super triste
+    - estoy tan triste
+    - triste
+    - muy triste
+    - infeliz
+    - no bien
+    - no muy bien
+    - extremadamente triste
+    - tan triste
+    - todo mal
+    - estoy mal
+
+- intent: que_haces
+  examples: |
+    - que andas haciendo?
+    - en que andas?
+    - que andabas haciendo?
+    - y que hacias?
+    - que hacias?
+    - estabas haciendo algo?
+    - que estas haciendo?
+    - que haces?
+    - contame, que haces?
+    - que estabas haciendo?
+    - que estas por hacer?
+
+- intent: bot_challenge
+  examples: |
+    - sos un bot?
+    - sos david realmente?
+    - estoy hablando con un bot?
+    - bro sos tremendo bot
+    - quiero hablar con david
+    - no quiero hablar con un bot
+    - sos vos?
+    - sos David?
+    - en serio sos vos?
+    - posta sos vos?
+
+#Info Personal
+
+- intent: edad
+  examples: |
+    - que edad tenes?
+    - cuantos años tenes?
+    - que edad tenias?
+    - años de edad?
+    - edad?
+    - sos mas grande que yo?
+    - sos mas chico que yo?
+    - necesito que me digas cuantos anios tenes
+
+- intent: ciudad_origen
+  examples: |
+    - de donde sos?
+    - de que ciudad venis?
+    - sos de Tandil?
+    - de donde eras vos?
+    - vos sos de aca?
+    - de que ciudad sos?
+    - ciudad origen?
+    - donde naciste?
+    - de donde eres tu
+    - necesito que me digas de donde sos
+  
+#Nombre
+
+- intent: decir_nombre
+  examples: |
+    - me llamo [tincho](nombre_persona)
+    - mi nombre es Martin
+    - soy Juan
+    - mi nombre es Ignacio
+    - me llamo herre
+    - soy Mateo
+
+- intent: es_tu_amigo
+  examples: |
+    - es tu amigo [Juan](nombre_persona)?
+    - sos amigo de tincho
+    - Martino es tu amigo?
+    - Mateo es amigo tuyo?
+    - es tu amigo Juan?
+    - sos amigo de Nicolas
+
+- intent: gracias
+  examples: |
+    - gracias!
+    - muchas gracias!
+    - gracias
+    - gracias por tu ayuda
+    - muchas gracias por tu ayuda
+    - muchas gracias por ayudarme
+    - gracias por ayudarme
+    - te lo agradezco mucho
+    - te lo agradezco
+    - gracias David
+
+- intent: decir_nombre_completo
+  examples: |
+    - mi apellido es [Arispe](apellido)
+    - mi apellido es Ferrero
+    - mi apellido es Bedini
+    - mi apellido es Caballero
+    - Sampedro es mi apellido
+    - Ferrero es mi apellido
+    - Spinelli mi apellido es
+    - Bedini
+    - Vazquez
+
+- intent: estado_de_la_carrera_negativo
+  examples: |
+    - yo no voy tan bien
+    - yo no voy muy bien
+    - no voy tan bien
+    - no voy muy bien
+    - se me esta complicando
+    - se esta poniendo dificil
+    - cada vez se pone peor
+    - se me hace muy dificil
+
+- intent: estado_de_la_carrera_positivo
+  examples: |
+    - voy bien tambien
+    - por suerte, voy muy bien
+    - voy mejorando
+    - lo voy llevando bien
+    - la voy llevando genial
+    - las estoy manejando muy bien
+    - me esta yendo de maravilla
+    - lo estoy llevando excelente
+
+- intent: decir_materia
+  examples: |
+    - cursamos juntos [Prog Exploratoria](materia)
+    - juntos cursamos [Investigacion Operativa](materia)
+    - cursamos [Sistemas Operativos](materia) juntos
+    - [Bases de datos](materia)
+    - cursamos [Lenguajes de Programacion](materia) juntos
+
+- intent: affirm_y_materia
+  examples: |
+    - sisi, cursamos juntos [Prog Exploratoria](materia)
+    - si, juntos cursamos [Investigacion Operativa](materia)
+    - sii, cursamos [Sistemas Operativos](materia) juntos
+    - exacto, [Bases de datos](materia)
+    - ajam, cursamos [Lenguajes de Programacion](materia) juntos
+
+#Facultad
+
+- intent: anio_cursada
+  examples: |
+    - en que año estas?
+    - que año estas cursando?
+    - cual es tu año actual
+    - que año de la carrera cursas
+    - estas cursando.. que año?
+    - que año cursas ahora?
+    - año actual
+    - actualmente en que año estas
+    - necesito que me digas que anio estas cursando
+
+- intent: lugar_estudio
+  examples: |
+    - donde estudias?
+    - en que facultad estudias?
+    - facultad?
+    - universidad?
+    - en que uni estabas?
+    - estabas estudiando no?
+    - donde cursabas?
+    - donde cursas
+    - cual universidad?
+    - que facu?
+    - que uni?
+    - en que universidad estudias?
+    - necesito que me digas donde estudias
+
+- intent: que_estudio
+  examples: |
+    - que estudias?
+    - que carrera estudias?
+    - cual es tu carrera?
+    - que carrera elegiste
+    - en que carrera estas?
+    - en cual carrera
+    - que era lo que estudiabas
+    - tu carrera?
+    - no me acuerdo el nombre de tu carrera
+    - necesito que me digas que carrera estas estudiando
+
+- intent: rol_facultad
+  examples: |
+    - soy [estudiante](cargo_facultad)
+    - soy [alumno](cargo_facultad)
+    - soy [docente](cargo_facultad)
+    - soy [profesor](cargo_facultad)
+    - [docente](cargo_facultad)
+    - [profesor](cargo_facultad)
+    - no, yo soy [docente](cargo_facultad) 
+    - no, yo soy [ayudante](cargo_facultad)
+    - si, yo soy [profesor](cargo_facultad) 
+    - si, yo soy [estudiante](cargo_facultad)
+    - no soy ninguno de esos
+    - ninguno
+    - no te voy a decir
+    - no te importa
+
+- intent: cursas_dia
+  examples: |
+    - cursas el dia [lunes](dia) ? 
+    - los [martes](dia) vos cursas?
+    - cursas los [miercoles](dia)?
+    - los dias [jueves](dia) cursas?
+    - cursas el dia [viernes](dia)?
+    - los dias [sabados](dia) cursas?
+    - los [domingos](dia) tenes que cursar?
+    - que materias cursas los [lunes](dia) ?
+    - que materias cursasbas los dias [martes](dia) ?
+    - vos cursas los dias [miercoles] pero que materias?
+    - que materias tenes el [jueves](dia)
+
+#Materias
+
+- intent: finales
+  examples: |
+    - como vas con los finales?
+    - que finales te quedan?
+    - tenes muchos finales pendientes?
+    - cuantos finales te quedan por rendir?
+    - finales?
+    - finales por rendir
+    - cuantos examenes finales debes?
+    - como vas con los cierres de materias
+    - muchos finales debes
+    - y con los finales como venis?
+    - y con los finales como vas?
+    - necesito que me digas cuantos finales debes
+
+- intent: cursando_materia
+  examples: |
+    - estas cursando [Prog Exploratoria](materia)?
+    - estas cursando [Investigacion Operativa](materia)?
+    - cursas [Lenguajes de Programacion](materia)
+    - cursas [Bases de Datos](materia)?
+    - [Sistemas Operativos](materia) cursas?
+
+- intent: materias_cursando
+  examples: |
+    - que materias estas cursando?
+    - en que materias estas inscripto ahora
+    - que materias estas haciendo este segundo cuatri
+    - tus materias actuales cuales eran?
+    - que materias decidiste hacer este cuatri
+    - cuales estas cursando este cuatri
+    - materias que cursas?
+    - materias en curso
+    - y que materias estas cursando?
+
+- intent: materias_por_anio
+  examples: |
+    - que materias son de [1](anio_materia) anio
+    - que materias son de [2](anio_materia) anio
+    - que materias son de [3](anio_materia) anio
+    - que materias son de [4](anio_materia) anio
+    - que materias son de [5](anio_materia) anio
+  
+- intent: todas_las_materias_del_plan
+  examples: |
+    - las materias de toda tu carrera
+    - cuales son las materias de toda tu carrera
+    - todas las materias de sistemas?
+    - me decis el plan de estudios completo?
+    - te sabes el plan de estudios?
+    - tenes el plan de estudios a mano?
+    - necesito el plan de estudios completo
+    - y el plan de estudios lo sabes?
+
+- intent: decir_materia_promocionada
+  examples: |
+    - la materia [Algebra I] la promocionaste?
+    - promocionaste Analisis Matematico I
+    - alcanzaste la promocion de Ciencias de la Computacion I ?
+    - promocionaste Programacion Orientada a Objetos?
+    - pudiste promocionar Lenguajes de Programacion?
+    - pudiste promocionar Teoria de la Informacion
+    - alcanzaste la promo de Introduccion al Calculo Diferencial e Integral
+
+- intent: opinion_de_la_materia
+  examples: |
+    - que opinion tenes acerca de la materia
+    - cual es tu opinion sobre Programacion Exploratoria?
+    - que opinas sobre Prog Exploratoria
+    - opinion de Exploratoria?
+    - tu opinion de la materia?
+    - que opinas sobre esta materia
+    - decime tu opinion acerca de esta materia
+    - y que opinas acerca de la materia
+
+- intent: acerca_de_carrera_y_materias
+  examples: |
+    - como te va con las materias en general?
+    - con la carrera como te esta yendo
+    - vas bien con la carrera?
+    - vas bien con las materias?
+    - como te va con la carrera en general?
+    - como te esta yendo con las materias?
+    - como venis con la carrera?
+    - y con las materias?
+    - y con la carrera?
+
+#Lookup tables
+
+- lookup: nombre_persona
+  examples: |
+    - Martino
+    - Ignacio
+    - Analia
+    - Matias
+    - Nacho
+    - Tincho
+    - Herre
+    - Martin
+    - Juani
+    - Pia
+    - Juan Francisco
+    - Juan
+    - Juan Ignacio
+    - Sol
+    - Tadeo
+    - Mateo
+    - Ximena
+    - Delfina
+    - Leonel
+    - Tomas
+    - Nicolas
+
+- lookup: apellido
+  examples: |
+    - Caballero
+    - Messi
+    - Ferrero
+    - Bedini
+    - Sampedro
+    - Vazquez
+    - Arispe
+    - Spinelli
+    - Echarri
+    - Billordo
+    - Donegana
+    - Crocci
+    - Leguizamon
+    - Goicochea
+    - Elgart
+    - Ciganda
+    - Murillo
+    - Benecier
+
+#Chat grupal
+
+- intent: consultar_por_ejercicio
+  examples: |
+    - alguno tiene el inciso [1](inciso) del tp [2](tp) de la materia [algebra lineal](materia)?
+    - alguno tiene el inciso [2](inciso) del tp [5](tp) de la materia programacion orientada a objetos?
+    - alguno tiene el [4](inciso) del tp [3](tp) de analisis matematico 1?
+    - alguno tiene hecho el inciso [3](inciso) del tp [1](tp) de disenio de compiladores?
+    - alguno tiene de analisis matematico 1 el inciso [2](inciso) del tp [4](tp)?
+    - tienen hecho el inciso [5](inciso) del tp [4](tp) de comunicacion de datos 2?
+    - me pasan el inciso [4](inciso) del tp [3](tp) de la materia analisis matematico 2?
+    - alguno me pasa el inciso [4](inciso) del tp [3](tp) de analisis matematico 1?
+
+- intent: consultar_por_ejercicio_otro_NO_lo_tiene
+  examples: |
+    - no, no tengo ese inciso 
+    - no, no lo tengo
+    - no, no tengo ese tp
+    - noup, no lo tengo
+    - no lo hice ese inciso
+    - no lo hice ese tp
+    - no lo hice
+    - no hay chance, es imposible ese inciso
+    - no hay chance, es imposible ese tp
+    - no hay chance, es imposible
+    - no lo tengo 
+
+- intent: consultar_por_ejercicio_otro_lo_tiene
+  examples: |
+    - si, lo tengo
+    - sisi, ese lo tengo
+    - sisi, ese lo hice
+    - sip, lo tengo
+    - sisi, lo hice
+    - si, lo hice
+    - si, lo tengo resuelto
+    - sisi, ese inciso era re facil
+    - sisi, ese tp era re facil
+    - sisi, una boludes ese inciso
+    - sisi, una boludes ese tp
+    - sisi, ahi te lo paso
+    - sisi, ahi te lo mando
+    - si amigo, ahi te lo mando
+    - si, ahi te lo paso
+    - ahi te lo paso
+    - ahi te lo mando
+    - ese inciso era re facil
+    - ese tp era re facil
+    - lo tengo resuelto, ahí te lo paso
+
+- intent: consultar_por_ejercicio_agradece
+  examples: |
+    - geniall, muchas gracias por el inciso
+    - geniall, muchas gracias por el tp
+    - geniall, muchas gracias
+    - gracias por el inciso
+    - gracias por el tp
+    - gracias por el inciso
+    - me sirve ese inciso
+    - me sirve ese tp
+    - me sirve
+
+- lookup: materia
+  examples: |
+    - Introduccion a la programacion I
+    - Analisis matematico I
+    - Algebra I
+    - Quimica
+    - Ciencias de la Computacion I
+    - Introduccion a la Programacion II
+    - Algebra Lineal
+    - Fisica General
+    - Matematica Discreta
+    - Ciencias de la Computacion II
+    - Analisis y Diseño de Algoritmos I
+    - Introduccion a la Arquitectura de Sistemas
+    - Analisis Matematico II
+    - Electricidad y Magnetismo
+    - Analisis y Diseño de Algoritmos II
+    - Comunicacion de Datos I
+    - Probabilidad y Estadistica
+    - Electronica Digital
+    - Programacion Orientada a Objetos
+    - Estructura de Almacenamiento de Datos
+    - Metodologias de Desarrollo de Software
+    - Arquitectura de Computadoras I
+    - Programacion Exploratoria
+    - Base de Datos
+    - Lenguajes de Programacion
+    - Sistemas Operativos
+    - Investigacion Operativa
+    - Arquitectura de Computadores y Tecnicas Digitales
+    - Teoria de la Informacion
+    - Comunicacion de Datos II
+    - Introduccion al Calculo Diferencial e Integral
+    - Diseño de Sistemas de Software
+    - Diseño de Compiladores
+    - Ingenieria de Software
+
+- regex: inciso
+  examples: |
+    - [1-9]{1}
+
+- regex: tp
+  examples: |
+    - [1-9]{1}
+    
+#Regex
+
+#- regex: nombre_persona
+#  examples: |
+#    - ((([aA-zZ]\w+ *){1,})+(, )*){1,} 
+  #Expresion regular que acepta espacios y comas
